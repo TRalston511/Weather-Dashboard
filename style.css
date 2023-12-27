@@ -1,0 +1,33 @@
+body{
+    background: black;
+    color: #fff;
+}
+h1{
+    background:grey;
+    color: black;
+    font-size: 1.75rem;
+    padding: 18px 0;
+    text-align: center;
+}
+.container{
+    display: flex;
+    padding: 30px;
+    gap: 35px;
+}
+.weather-input{
+    width: 550px;
+}
+.weather-input input{
+    width: 100%;
+    height: 46px;
+    outline-color: blue;
+    padding: 0 15px;
+    margin: 10px 0 20px 0;
+    font-size: 1.05rem;
+    border: 1px solid;
+    border-radius: 5px;
+}
+.weather-data{
+    width: 100%;
+
+}
