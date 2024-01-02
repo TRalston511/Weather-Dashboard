@@ -1,14 +1,14 @@
 var searchButton = document.querySelector(".search-btn");
 var cityInput = document.querySelector(".city-input");
+var weatherCardDiv = document.querySelector(".weather-cards");
 var API_KEY = "02c9368f3f57f52dd91a2a7829833177"; // API KEY for OpenWeatherMap API
 
 var createWeatherCard = (weatherItem) => {
     return `<li class="card">
-                <h3>(Time/Date)</h3>
-                <h4>Weather Condition:</h4>
-                <h4>Temperature:</h4>
-                <h4>Wind Speed:</h4>
-                <h4>Humidity:</h4> 
+                <h3>(${weatherItem.dt_txt.split(" ")[0]})</h3>
+                <h4>Temperature:${(weatherItem.main.temp - 273.15).toFixed(2)}C</h4>
+                <h4>Wind Speed:${weatherItem.wind.speed}M/S</h4>
+                <h4>Humidity:${weatherItem.main.humidity}%</h4> 
             </li>`;
 }
 
@@ -28,6 +28,7 @@ var getWeatherDetails = (cityName, lat, lon) => {
 
         console.log(fiveDaysForecast);
         fiveDaysForecast.forEach(weatherItem => {
+            weatherCardDiv.insertAdjacentHTML("beforeend", createWeatherCard(weatherItem));
             createWeatherCard(weatherItem);
         });
     })
