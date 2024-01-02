@@ -8,9 +8,9 @@ var createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0){ // Main Card
         return ` <div class="detail">
                     <h2>${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h2>
-                    <h4>Temperature:${(weatherItem.main.temp - 273.15).toFixed(2)}</h4>
-                    <h4>Wind Speed:${weatherItem.wind.speed}</h4>
-                    <h4>Humidity:${weatherItem.main.humidity}</h4>
+                    <h4>Temperature:${(weatherItem.main.temp - 273.15).toFixed(2)}C</h4>
+                    <h4>Wind Speed:${weatherItem.wind.speed}M/S</h4>
+                    <h4>Humidity:${weatherItem.main.humidity}%</h4>
                 </div>
                 <div class="weather-condition">
                     <h4>${weatherItem.weather[0].description}</h4>
