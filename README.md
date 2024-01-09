@@ -19,3 +19,4 @@ https://tralston511.github.io/Weather-Dashboard/
 https://github.com/TRalston511
 
 ## ScreenShot 
+![Screenshot 2024-01-02 151001](https://github.com/TRalston511/Weather-Dashboard/assets/148827170/10bc6376-ce90-4e47-9d6d-6f650eed936f)
